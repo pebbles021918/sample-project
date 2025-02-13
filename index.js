@@ -1,2 +1,14 @@
-"console.log('Hello, Git!');" 
-"console.log('New feature added!');" 
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+// Root Route
+app.get('/', (req, res) => {
+    res.send('Hello from Heroku!');
+});
+
+// Start the Server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
